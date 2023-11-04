@@ -1,0 +1,84 @@
+/* ----------- default styles ----------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+  }
+  
+  html,
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* ------------------ Copy style from here! ----------------- */
+  .expandable-search-bar {
+    padding: 10px 20px;
+    background: #0006;   /* Change background Color of Nav Bar */
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .logo-part {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .search-box {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .search-box input {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+    height: 40px;
+    width: 0px;
+    background: #dadada;      /* Change background Color of Input Box */
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .search-box input:focus {
+    outline: 2px solid #333;
+    background: #dadadadd;        /* Change background Color of Nav Bar When focused */
+  }
+  
+  .search-box button {
+    height: 40px;
+    padding: 0px 10px;
+    background: #dadada;      /* Change background Color of Search Button */
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /*--------- Expanding Animation ---------*/
+  @keyframes expandSearch {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 420px;
+    }
+  }
+  
+  /*--------- Shrinking Animation ---------*/
+  @keyframes shrinkSearch {
+    from {
+      width: 420px;
+    }
+    to {
+      width: 0px;
+    }
+  }
+  

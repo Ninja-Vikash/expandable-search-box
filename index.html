@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expandable search Bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Copy code from here! & don't forget to select script code-->
+
+    <div class="expandable-search-bar">
+      <!-- Your brand name below -->
+      <div class="logo-part">Logo</div>
+      <div class="search-box">
+        <input id="textSection" type="text" />
+        <button id="userinput">Search</button>
+      </div>
+    </div>
+
+    <!-- script is here! -->
+
+    <script>
+      var userinput = document.getElementById("userinput");
+      var textSection = document.getElementById("textSection");
+      let clickCount = 0;
+      userinput.addEventListener("click", () => {
+        if (clickCount == 0) {
+          textSection.style.width = "420px";
+          textSection.style.animation = "expandSearch ease 1.2s normal 1";
+          textSection.style.paddingLeft = "10px"
+          clickCount = 1;
+        } else {
+          textSection.style.width = "0px";
+          textSection.style.animation = "shrinkSearch ease 0.8s normal 1";
+          textSection.style.paddingLeft = "0px"
+          clickCount = 0;
+        }
+      });
+    </script>
+  </body>
+</html>
